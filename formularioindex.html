@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO HTML</title>
+</head>
+<body>
+    <main>
+        <h1>Cadastre-se</h1>
+        <form>
+            <div>
+                <label for="nome" aria-required="true">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div>
+                <label for="dats">data de nascimento</label>
+                <input type="date" name="dats" id="dats"required>
+            </div>
+            <div>
+                <label for="email">email:</label>
+                <input type="email" name="" id="email"required>
+            </div>
+            <div>
+                <legend>stacks</legend>
+                <input type="checkbox" name="stacks" id="html">
+                <label for="html">HTML</label>
+                <input type="checkbox" name="stacks" id="CSS">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" name="stacks" id="JAVASCRIPT">
+                <label for="JAVASCRIPT">JAVASCRIPT</label>
+            </div>
+            <div>
+                <label for="nivel">nivel</label>
+                <select name="nivel" id="nivel">
+                    <option value="" disabled selected>selecione</option>
+                    <option value="junior">junior</option>
+                    <option value="pleno">pleno</option>
+                    <option value="senior">senior</option>
+                    <option value="outro">outro</option>
+                </select>
+            </div>
+            <div>
+                <label hidden for="outroCaso"></label> <br>
+                <textarea style="resize: none;" placeholder="em caso de outro, especifique" name="nivel" id="outroCaso"></textarea>
+            </div>
+            <div>
+                <legend>genero</legend>
+                <input type="radio" name="genero" id="m">
+                <label for="m">masculino</label>
+                <input type="radio" name="genero" id="f">
+                <label for="f">feminino</label>
+                <input type="radio" name="genero" id="n">
+                <label for="n">outro</label>
+            </div>
+            <div>
+                <label for="senha">senha</label>
+                <input type="password" id="senha" required>
+            </div>
+            <button type="submit">cadastrar</button>
+        </form>
+    </main>
+</body>
+</html>
