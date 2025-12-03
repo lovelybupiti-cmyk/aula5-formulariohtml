@@ -1,11 +1,19 @@
 * {
-font-family: Arial, Helvetica, sans-serif;
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 outline: 0;
 text-decoration: none;
+font-family: "axiforma", sans-serif;
+
 }
+
+@font-face {
+  font-family: "axiforma";
+  src: url(../assets/Axiforma-Font-Family/TTF/Axiforma-Regular.ttf);
+  font-weight: 100;
+}
+
 /* variaveis de css esse :root */
 :root {
   --bg-primary: #041643;
@@ -14,18 +22,34 @@ text-decoration: none;
   --gray: #4e4e4e;
   --dark-grey: #696969;
   --light-gray: #afafaf;
+  --lighter-gray: #d7d7d7;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bg-primary);
   background-image: url(../assets/gradient.svg);
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 105vh;
   height: 100vh;
-  padding: 100px 120px;
+  padding: 100px 120px 30px;
 }
-.divintro {
+
+section {
   margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+
+
+.divintro {
+  flex: 1;
+  padding: 50px 30px;
 }
 
 .divintro > h1{
@@ -38,17 +62,36 @@ body {
 }
 
 form {
+  flex: 1;
   background-color: var(--color-white);
   width: 343.33px;
   padding: 50px 30px;
+  border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 form label, form input {
-  font-size: 10px;
+  font-size: 8px;
+  color: var(--dark-grey);
 }
 
 form input {
   width: 100%;
+  border: 1px solid var(--lighter-gray);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+form input::placeholder {
+  color: var(--lighter-gray);
+}
+
+.divbut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .link-cadastro {
@@ -68,6 +111,7 @@ form input {
   border-style: none;
   border-radius: 5px;
   font-size: 9px;
+  display: flex;
 }
 
 
@@ -75,8 +119,12 @@ h1 {
   color: #fff;
 }
 
+
 footer > p {
   color: var(--light-gray);
   font-size: small;
   text-align: center;
+  position: sticky;
 }
+
+
