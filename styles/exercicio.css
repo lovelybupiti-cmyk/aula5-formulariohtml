@@ -19,6 +19,7 @@ font-family: "axiforma", sans-serif;
   --bg-primary: #041643;
   --color-white: #fff;
   --color-primary: #1352F1;
+  --color-seconday: rgb(4, 22, 68);
   --gray: #4e4e4e;
   --dark-grey: #696969;
   --light-gray: #afafaf;
@@ -64,7 +65,8 @@ section {
 form {
   flex: 1;
   background-color: var(--color-white);
-  width: 343.33px;
+  max-width: 500px;
+  min-width: 500px;
   padding: 50px 30px;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -81,6 +83,10 @@ form input {
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 24px;
+}
+
+form input:focus {
+  border-color: var(--bg-primary);
 }
 
 form input::placeholder {
@@ -107,13 +113,23 @@ form input::placeholder {
 .buttonlogin {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 10px 37px;
+  padding: 10px 50px;
   border-style: none;
   border-radius: 5px;
   font-size: 9px;
   display: flex;
 }
 
+.buttonlogin:hover {
+background-color: var(--color-seconday);
+cursor: pointer;
+transition-duration: 0.5s;
+}
+
+.buttonlogin:active {
+  background-color: #1352F1;
+  transform: translateY(12px);
+}
 
 h1 {
   color: #fff;
